@@ -1,5 +1,4 @@
-const { Schema, model } = require("mongoose");
-
+const { Schema, model } = require('mongoose');
 
 const reactionSchema = new Schema({
   reactionId: {
@@ -19,7 +18,7 @@ const reactionSchema = new Schema({
     type: Date,
     default: Date.now,
     get: function (createdAt) {
-      return createdAt.toISOString(); 
+      return createdAt.toISOString();
     },
   },
 });
