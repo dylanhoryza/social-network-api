@@ -22,6 +22,12 @@ const thoughtSchema = new Schema({
   reactions: 
     [reactionSchema],
 
+},
+{
+  toJSON:{
+    getters: true,
+    virtuals: true,
+  },
 });
 
 thoughtSchema.virtual('reactionCount').get(function () {
