@@ -32,6 +32,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  // update user by its ID
   async updateUserById(req, res) {
     try {
       const updatedUser = await User.findByIdAndUpdate(
@@ -49,6 +50,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  // delete user by its ID
   async deleteUserById(req, res) {
     try {
       const deletedUser = await User.findByIdAndDelete(req.params.userId);
@@ -62,6 +64,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  // add a friend to a specific User
   async addFriend(req, res) {
     try {
       const friend = await User.findOneAndUpdate(

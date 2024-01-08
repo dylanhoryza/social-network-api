@@ -3,7 +3,7 @@ const {User, Thought }= require('../models/');
 const { users, thoughts } = require('./data');
 
 
-
+// mongoDB connection
 connection.on('error', (error) => {
   console.error('MongoDB connection error:', error);
 });
