@@ -40,6 +40,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  // update thought by its ID
   async updateThoughtById(req, res) {
     try {
       const updatedThought = await Thought.findByIdAndUpdate(
